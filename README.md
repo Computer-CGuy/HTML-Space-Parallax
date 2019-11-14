@@ -22,11 +22,11 @@ for(i=0;i<1000;i++){
         $('.layer'+z).append('<div class="dot" style="background-color:rgb('+r+','+g+','+b+ ');padding:'+s+';top: '+x+';left: '+y+';"></div>');
 }
 ```
-Where the 1000 in for stands for number of stars, I have added stars in the form of layers. 
-The location of the stars are random.
-X,Y stands for coordinates
-z stands for layer no.(In the HTML file, I have 6 layers)
-s stands for size. (Here size is padding-size instead of height and width)
+Where the 1000 in for stands for number of stars, I have added stars in the form of layers. \
+The location of the stars are random.\
+X,Y stands for coordinates\
+z stands for layer no.(In the HTML file, I have 6 layers)\
+s stands for size. (Here size is padding-size instead of height and width)\
 r,g,b stands for red,green and blue colors.
 #### The most important code in parallaxing of any website is
 ```
@@ -35,9 +35,9 @@ $(window).scroll(function(){
   $(element).css('transform','translateY('+(((wScroll-($(element).offset().top))/1))+'px)')
 }); 
 ```
-Here the /1 in the code is sensitivity, more than 1.3 is recommended.
-This must not be used for the element which is at the top of the page, because it jitters due to ```$(element).offset().top```
-For it use this
+Here the /1 in the code is sensitivity, more than 1.3 is recommended.\
+This must not be used for the element which is at the top of the page, because it jitters due to ```$(element).offset().top```\
+For this use
 ```
 $(top-element).css('transform','translateY('+((wScroll/1.1))+'px)')
 ```
