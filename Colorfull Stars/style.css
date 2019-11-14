@@ -1,0 +1,51 @@
+:root{
+    --one: #9C01C2;
+    --two: #C268B6;
+    --three: #A66AF5;
+    --four: #D14872;
+    --five: #DB3462;
+}
+body{
+    font-family: 'Bebas Neue', cursive;
+
+    height: 100%;
+    margin:0;
+    padding: 0;
+    background-color: black;
+}
+.dot{
+    position: relative;
+    width:0;
+    background-color: white;
+    padding: 5px;
+    border-radius: 100%;
+}
+.layer1{
+    position: fixed;
+    top: 10;
+    left: 10;
+}
+.layer{
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+.slide{
+    border-top: white solid 2px;
+    border-bottom: white solid 2px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+h1.title{
+    transition: transform 0.1s ease-in-out;
+    width: 100%;
+    margin-top: calc(25% - 1em);
+    text-align: center;
+    color: white;
+    font-size: 160px;
+    font-weight: 100;
+     font-family: 'Bebas Neue', cursive;
+
+   font-weight: 300;
+}
