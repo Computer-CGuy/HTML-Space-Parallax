@@ -11,18 +11,26 @@ $(document).ready(function(){
         r =Math.floor(Math.random() * 200) + 30;
         g =Math.floor(Math.random() * 200) + 30;
         b =Math.floor(Math.random() * 200) + 30;
-        $('.layer'+z).append('<div class="dot" style="bsackground-color:rgb('+r+','+g+','+b+ ');padding:'+s+';top: '+x+';left: '+y+';"></div>');
+        c=(Math.floor(Math.random() * 10) + 0)/10;
+        r = 255
+        g = 255
+        b = 255
+        $('.layer'+z).append('<div class="dot" style="background-color:rgba('+r+','+g+','+b+','+c+');padding:'+s+';top: '+x+';left: '+y+';"></div>');
     }
     s=0;
     $('h1.title').each(function(index,k){
         $(this).attr('id','p'+index)
         s+=1;
     });
+    a = []
+    for(i=1;i<s;i++){
+        a.push($('#p'+i).offset().top)
+    }
 });
 $(window).scroll(function(){
     wScroll = $(this).scrollTop();
     for(i=1;i<s;i++){
-    $('#p'+i).css('transform','translateY('+(((wScroll-($('#p'+i).offset().top))/1))+'px)')
+    $('#p'+i).css('transform','translateY('+(((wScroll-(a[i-1]))/1)+100)+'px)')
     }
     $('#p0').css('transform','translateY('+((wScroll/1.1))+'px)')
     for(i=1;i<s;i++){

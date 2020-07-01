@@ -38,9 +38,9 @@ body{
     width: 100%;
 }
 h1.title{
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-out;
     width: 100%;
-    margin-top: calc(25% - 1em);
+    margin-top: calc(40% - 1em);
     text-align: center;
     color: white;
     font-size: 160px;
