@@ -7,7 +7,7 @@ $(document).ready(function(){
         x = Math.floor(Math.random() * innerHeight*3) + 1;
         y=Math.floor(Math.random() * innerWidth) + 1;
         z=Math.floor(Math.random() * 6) + 1;
-        s=(Math.floor(Math.random() * 30) + 10)/10;
+        s=(Math.floor(Math.random() * 40) + 10)/10;
         r =Math.floor(Math.random() * 200) + 30;
         g =Math.floor(Math.random() * 200) + 30;
         b =Math.floor(Math.random() * 200) + 30;
@@ -32,7 +32,7 @@ $(window).scroll(function(){
     for(i=1;i<s;i++){
     $('#p'+i).css('transform','translateY('+(((wScroll-(a[i-1]))/1)+100)+'px)')
     }
-    $('#p0').css('transform','translateY('+((wScroll/1.1))+'px)')
+    $('#p0').css('transform','translateY('+((wScroll/1.5))+'px)')
     for(i=1;i<s;i++){
     $('.layer'+i).css('transform','translateY('+(wScroll/(1+(i/10)*3))*-1+'px)')
     }
